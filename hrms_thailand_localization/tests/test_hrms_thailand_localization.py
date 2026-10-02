@@ -14,6 +14,10 @@ class TestHrmsThailandLocalization(IntegrationTestCase):
 		self.assertIn("SpaceCode Co., Ltd.", hooks.get("app_publisher", []))
 		self.assertIn("p@spacecode.co.th", hooks.get("app_email", []))
 
+	def test_erpnext_is_a_required_app(self):
+		hooks = frappe.get_hooks()
+		self.assertIn("erpnext", hooks.get("required_apps", []))
+
 	def test_app_package_is_importable(self):
 		import hrms_thailand_localization
 
