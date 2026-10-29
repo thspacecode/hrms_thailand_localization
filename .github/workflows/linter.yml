@@ -2,6 +2,7 @@ name: Linters
 
 on:
   pull_request:
+    types: [opened, synchronize, reopened, ready_for_review, converted_to_draft]
   workflow_dispatch:
 
 permissions:
@@ -15,7 +16,7 @@ jobs:
   linter:
     name: 'Frappe Linter'
     runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request'
+    if: github.event_name != 'pull_request' || github.event.pull_request.draft == false
 
     steps:
       - uses: actions/checkout@v6
@@ -34,6 +35,7 @@ jobs:
           semgrep ci --config ./frappe-semgrep-rules/rules --config r/python.lang.correctness
 
   deps-vulnerable-check:
+    if: github.event_name != 'pull_request' || github.event.pull_request.draft == false
     name: 'Vulnerable Dependency Check'
     runs-on: ubuntu-latest
 
