@@ -1,0 +1,134 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:rule_name",
+ "creation": "2026-11-02 10:03:14.730242",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "rule_name",
+  "currency",
+  "from_date",
+  "to_date",
+  "income_classification",
+  "expense_deduction_rate",
+  "expense_deduction_cap",
+  "personal_allowance",
+  "brackets",
+  "legal_reference",
+  "disabled"
+ ],
+ "fields": [
+  {
+   "fieldname": "rule_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Rule Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date"
+  },
+  {
+   "default": "40(1)",
+   "fieldname": "income_classification",
+   "fieldtype": "Select",
+   "label": "Income Classification",
+   "options": "40(1)\n40(2)"
+  },
+  {
+   "fieldname": "expense_deduction_rate",
+   "fieldtype": "Percent",
+   "label": "Expense Deduction Rate"
+  },
+  {
+   "fieldname": "expense_deduction_cap",
+   "fieldtype": "Currency",
+   "label": "Expense Deduction Cap",
+   "options": "currency"
+  },
+  {
+   "fieldname": "personal_allowance",
+   "fieldtype": "Currency",
+   "label": "Personal Allowance",
+   "options": "currency"
+  },
+  {
+   "fieldname": "brackets",
+   "fieldtype": "Table",
+   "label": "Brackets",
+   "options": "Thai Payroll Tax Bracket"
+  },
+  {
+   "fieldname": "legal_reference",
+   "fieldtype": "Small Text",
+   "label": "Legal Reference"
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-11-02 10:12:25.647755",
+ "modified_by": "Administrator",
+ "module": "HRMS Thailand Localization",
+ "name": "Thai Payroll Tax Rule",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "search_fields": "rule_name",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "rule_name",
+ "track_changes": 1
+}

@@ -1,0 +1,61 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "creation": "2026-11-02 10:03:13.124333",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "allowance_category",
+  "declared_amount",
+  "allowed_amount",
+  "supporting_document",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "allowance_category",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Allowance Category",
+   "reqd": 1
+  },
+  {
+   "fieldname": "declared_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Declared Amount"
+  },
+  {
+   "fieldname": "allowed_amount",
+   "fieldtype": "Currency",
+   "label": "Allowed Amount"
+  },
+  {
+   "fieldname": "supporting_document",
+   "fieldtype": "Attach",
+   "label": "Supporting Document"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-11-02 10:12:24.919823",
+ "modified_by": "Administrator",
+ "module": "HRMS Thailand Localization",
+ "name": "Thai Payroll Tax Allowance",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
